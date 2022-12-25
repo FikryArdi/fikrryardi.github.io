@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/nav-icon.png" />
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Portfolio - Fikry Ardi Fatma</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="sticky top-0 bg-color-4 z-30 transition-all" id="nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center py-6 md:justify-between md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="index.html">
+                        <img class="h-10 w-auto sm:h-12" src="assets/img/nav-icon.png" alt="">
+                    </a>
+                </div>
+                <div class="-mr-2 -my-2 md:hidden" id="burger-menu">
+                    <button type="button"
+                        class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                        aria-expanded="false">
+                        <span class="sr-only">Open menu</span>
+                        <!-- Heroicon name: outline/menu -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <nav class="hidden md:flex md:space-x-16 ">
+                    <a href="index.html" class="text-lg font-extrabold text-color-blue hover:text-blue-500">
+                        Home
+                    </a>
+                    <a href="index.html#project" class="text-lg font-medium text-color-blue hover:text-blue-500">
+                        Projek
+                    </a>
+                    <!-- <a href="about.html" class="text-lg font-extrabold text-color-blue hover:text-blue-500">
+                        About
+                    </a> -->
+                    <p class="btnModalContact text-lg font-medium text-color-blue hover:text-blue-500 cursor-pointer">
+                        Contact me
+                    </p>
+                </nav>
+            </div>
+        </div>
+
+        <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden md:hidden"
+            id="navbar-hidden-menu">
+            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+                <div class="pt-5 pb-6 px-5">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <img class="h-10 w-auto" src="assets/img/nav-icon.png" alt="Workflow">
+                        </div>
+                        <div class="-mr-2" id="close-button">
+                            <button type="button"
+                                class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                <span class="sr-only">Close menu</span>
+                                <!-- Heroicon name: outline/x -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <nav class="grid gap-y-8">
+                            <a href="index.html" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                <span class="ml-3 text-base font-medium text-color-blue hover:text-blue-500">
+                                    Home
+                                </span>
+                            </a>
+
+                            <a href="index.html#project" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                <span class="ml-3 text-base font-medium text-color-blue hover:text-blue-500">
+                                    Project
+                                </span>
+                            </a>
+
+                            <a href="about.html" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                <span class="ml-3 text-base font-medium text-color-blue hover:text-blue-500">
+                                    About
+                                </span>
+                            </a>
+
+                            <p
+                                class="btnModalContact -m-3 p-3 flex items-center rounded-md hover:bg-gray-50 cursor-pointer">
+                                <span class="ml-3 text-base font-medium text-color-blue hover:text-blue-500">
+                                    Contact Me
+                                </span>
+                            </p>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Section CTA -->
+    <section class="relative my-10" id="cta">
+        <!-- Image Pattern Mobile -->
+        <img class="absolute w-screen sm:hidden" src="assets/img/pattern/pattern-mobile.png" class="" alt="">
+        <div class="mx-auto px-8 sm:px-6 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-16 sm:mx-auto max-w-7xl">
+            <div class="flex flex-col row-start-2 justify-center sm:row-start-1 sm:col-start-1">
+                <h1 class="font-bold text-3xl text-color-blue leading-normal lg:text-6xl lg:leading-normal">Halo, Saya
+                    Fikry
+                </h1>
+                <h1 class="font-bold text-3xl text-color-purple leading-normal mb-4 lg:text-6xl lg:leading-normal">UI/UX
+                    Designer</h1>
+                <div class="grid grid-cols-1 xl:grid-cols-2 relative">
+                    <a href="index.html#project"
+                        class="btn-gradient-1  z-10 border-2 my-2 sm:my-4 py-3 sm:py-4 px-8 text-white text-center text-lg font-semibold rounded-xl sm:rounded-3xl shadow-md sm:block sm:w-60 ">
+                        <div class="flex justify-center">
+                            <i class="material-icons-outlined mr-2 pt-0.5">
+                                arrow_circle_down
+                            </i>
+                            <span>Projek Saya</span>
+                        </div>
+                    </a>
+                    <a href="assets/file/ATS RESUME FIKRY ARDI FATMA.pdf"
+                        class="btn-outline-pink z-10 border-2 my-2 sm:my-4 py-3 sm:py-4 px-8 text-white text-center text-lg font-semibold rounded-xl sm:rounded-3xl shadow-md sm:block sm:w-60 ">
+                        <div class="flex justify-center">
+                            <i class="material-icons-outlined mr-2 pt-0.5">
+                                file_download
+                            </i>
+                            <span>Download CV</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="h-72 h-200 row-start-1 sm:row-start-1 sm:col-start-2">
+                <div class="relative">
+                    <img src="assets/img/animation-cta/1.png"
+                        class="absolute transform scale-50 -left-12 -top-16 sm:-top-4 sm:-left-24 xl:scale-100 xl:left-0 xl:top-8 slideFast">
+                    <img src="assets/img/animation-cta/2.png"
+                        class="absolute transform scale-50 right-24 top-44 sm:top-60 sm:right-36 xl:scale-100 xl:top-96 xl:right-52 slideFast">
+                    <img src="assets/img/animation-cta/3.png"
+                        class="absolute transform scale-50 -right-10 top-4 sm:top-36 xl:scale-100 xl:right-4 xl:top-44 slideFast">
+                    <img src="assets/img/animation-cta/4.png"
+                        class="absolute transform scale-60 -left-8 -top-24 sm:top-0 sm:-left-20 sm:scale-75 xl:scale-100 xl:top-14 xl:left-16 z-10 slideFast">
+                    <img src="assets/img/animation-cta/5.png"
+                        class="absolute transform scale-75 top-4 sm:scale-75 sm:top-20 sm:-left-4 xl:top-28 xl:scale-100 xl:left-20 z-20 slideSlow">
+                    <img src="assets/img/animation-cta/6.png"
+                        class="absolute transform scale-60 -top-32 -right-6 sm:-top-8 sm:right-4 sm:scale-75 xl:scale-100 xl:top-2 xl:right-16 z-10 slideFast">
+                    <img src="assets/img/animation-cta/7.png"
+                        class="absolute transform scale-50 -top-8 -right-8 xl:scale-100 xl:top-6 xl:right-8 slideFast">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section CTA -->
+
+    <!-- Section Project -->
+    <section class="bg-white relative py-4 md:mt-20 " id="project">
+        <!-- Image Pattern -->
+        <img class="absolute  md:top-0 lg:-top-60 sm:w-screen" src="assets/img/pattern/work-pattern.png" class=""
+            alt="">
+        <div class=" relative max-w-7xl mx-auto my-8 px-8 md:my-20">
+            <div class="mb-10">
+                <img class="inline-block mr-2 w-12 sm:w-20 sm:mr-8" src="assets/img/icon/project-icon.png" alt="">
+                <h1
+                    class="align-middle font-extrabold text-2xl text-color-2 leading-normal lg:text-5xl lg:leading-normal inline-block">
+                    Projek Saya</h1>
+            </div>
+
+            <div class="grid grid-cols-1 gap-24">
+
+                <!--Satudikti-->
+                <div class=" grid grid-cols-1 sm:grid-cols-2 shadow-xl sm:gap-24 rounded-2xl ">
+                    <img class="h-full w-auto" src="assets/img/project-home/satudikti.png" alt="">
+                    <div class="my-auto px-6 sm:pr-8 lg:pr-24 sm:px-0">
+                        <h3 class="text-xl sm:text-4xl font-semibold my-4">Satudikti</h3>
+                        <p class="text-base sm:text-xl text-gray-400 my-4 leading-loose sm:leading-loose">Satudikti
+                            merupakan platform terintegrasi yang mendukung
+                            berbagai layanan unggulan pada Perguruan Tinggi.
+                        </p>
+                        <div class="grid grid-cols-1 xl:grid-cols-2 sm:my-4 mb-4">
+                            <a href="assets/file/SATU DIKTI DESIGN CASE STUDY - FIKRY ARDI.pdf" target="_blank"
+                                class="btn-gradient-2 border-2 my-4 py-2.5 px-4 text-white text-center text-md sm:text-lg font-light rounded-lg shadow-sm mx-auto block w-52 sm:block sm:w-60 ">
+                                <div class="flex justify-center">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5">
+                                        search
+                                    </i>
+                                    <span class="font-medium">Lihat Studi Kasus</span>
+                                </div>
+                            </a>
+                            <a href="https://satudikti.id/" target="_blank"
+                                class="my-4 py-2.5 px-4 text-center text-md sm:text-lg font-light rounded-lg block w-52 mx-auto sm:block sm:w-60 ">
+                                <div class="flex justify-center text-gray-500 hover:text-gray-700">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5  ">
+                                        link
+                                    </i>
+                                    <span class="font-medium">Download App</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--JDIH-->
+                <div class="grid grid-cols-1 sm:grid-cols-2 shadow-xl sm:gap-24 rounded-2xl ">
+                    <div class="my-auto px-6 row-start-2 sm:row-start-1 sm:pl-12 lg:pl-24 sm:px-0">
+                        <h3 class="text-xl sm:text-4xl font-semibold my-4">JDIH</h3>
+                        <p class="text-base sm:text-xl text-gray-400 my-4 leading-loose sm:leading-loose">JDIH ialah
+                            sebuah website
+                            untuk masyarakat tentang
+                            dokumentasi hukum yang
+                            dimiliki oleh DPD
+                            RI</p>
+                        <div class="grid grid-cols-1 xl:grid-cols-2 sm:my-4 mb-4">
+                            <a href="#"
+                                class="btn-gradient-5 border-2 my-4 py-2.5 px-4 text-white text-center text-md sm:text-lg font-light rounded-lg shadow-sm mx-auto block w-52 sm:block sm:w-60 ">
+                                <div class="flex justify-center">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5">
+                                        lock
+                                    </i>
+                                    <span class="font-medium">Coming Soon</span>
+                                </div>
+                            </a>
+                            <a href="https://jdih.dpd.go.id/" target="_blank"
+                                class="my-4 py-2.5 px-4 text-center text-md sm:text-lg font-light rounded-lg block w-52 mx-auto sm:block sm:w-60 ">
+                                <div class="flex justify-center text-gray-500 hover:text-gray-700">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5  ">
+                                        link
+                                    </i>
+                                    <span class="font-medium">Lihat Website</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <img class="h-full w-auto" src="assets/img/project-home/1.png" alt="">
+                </div>
+
+                <!--Nyambi-->
+                <div class=" grid grid-cols-1 sm:grid-cols-2 shadow-xl sm:gap-24 rounded-2xl ">
+                    <img class="h-full w-auto" src="assets/img/project-home/nyambi.png" alt="">
+                    <div class="my-auto px-6 sm:pr-8 lg:pr-24 sm:px-0">
+                        <h3 class="text-xl sm:text-4xl font-semibold my-4">Nyambi</h3>
+                        <p class="text-base sm:text-xl text-gray-400 my-4 leading-loose sm:leading-loose">Nyambi adalah
+                            sebuah solusi bagi mahasiswa untuk mencari kegiatan non-akademik agar lebih produktif</p>
+                        <div class="grid grid-cols-1 xl:grid-cols-2 sm:my-4 mb-4">
+                            <a href="https://medium.com/@fikryard/studi-kasus-ui-ux-nyambi-aplikasi-untuk-membantu-mahasiswa-mencari-kegiatan-non-akademik-df93ca464524"
+                                target="_blank"
+                                class="btn-gradient-4 border-2 my-4 py-2.5 px-4 text-white text-center text-md sm:text-lg font-light rounded-lg shadow-sm mx-auto block w-52 sm:block sm:w-60 ">
+                                <div class="flex justify-center">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5">
+                                        search
+                                    </i>
+                                    <span class="font-medium">Lihat Studi Kasus</span>
+                                </div>
+                            </a>
+                            <a href="assets/file/Fikry Ardi Fatma - Studi Kasus UIUX Nyambi.pdf" target="_blank"
+                                class="my-4 py-2.5 px-4 text-center text-md sm:text-lg font-light rounded-lg block w-52 mx-auto sm:block sm:w-60 ">
+                                <div class="flex justify-center text-gray-500 hover:text-gray-700">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5  ">
+                                        file_download
+                                    </i>
+                                    <span class="font-medium">Download PDF</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--StudentHunt-->
+                <div class="grid grid-cols-1 sm:grid-cols-2 shadow-xl sm:gap-24 rounded-2xl ">
+                    <div class="my-auto px-6 row-start-2 sm:row-start-1 sm:pl-12 lg:pl-24 sm:px-0">
+                        <h3 class="text-xl sm:text-4xl font-semibold my-4">StudentHunt</h3>
+                        <p class="text-base sm:text-xl text-gray-400 my-4 leading-loose sm:leading-loose">StudentHunt
+                            ialah website untuk para mahasiswa atau siswa dalam mencari pengalaman mangang, kerja
+                            praktik.</p>
+                        <div class="grid grid-cols-1 xl:grid-cols-2 sm:my-4 mb-4">
+                            <a href="projek.html" target="_blank"
+                                class="btn-gradient-2 border-2 my-4 py-2.5 px-4 text-white text-center text-md sm:text-lg font-light rounded-lg shadow-sm mx-auto block w-52 sm:block sm:w-60 ">
+                                <div class="flex justify-center">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5">
+                                        search
+                                    </i>
+                                    <span class="font-medium">Lihat Studi Kasus</span>
+                                </div>
+                            </a>
+                            <a href="assets/file/Fikry Ardi Fatma - Studi Kasus UIUX StudentHunt.pdf" target="_blank"
+                                class="my-4 py-2.5 px-4 text-center text-md sm:text-lg font-light rounded-lg block w-52 mx-auto sm:block sm:w-60 ">
+                                <div class="flex justify-center text-gray-500 hover:text-gray-700">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5  ">
+                                        file_download
+                                    </i>
+                                    <span class="font-medium">Download PDF</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <img class="h-full w-auto row-start-1 sm:row-start-1" src="assets/img/project-home/2.png" alt="">
+                </div>
+
+                <!--JATRA-->
+                <div class="grid grid-cols-1 sm:grid-cols-2 shadow-xl sm:gap-24 rounded-2xl ">
+                    <img class="h-full w-auto" src="assets/img/project-home/3.png" alt="">
+                    <div class="my-auto px-6 sm:pr-8 lg:pr-24 sm:px-0">
+                        <h3 class="text-xl sm:text-4xl font-semibold my-4">Jatra</h3>
+                        <p class="text-base sm:text-xl text-gray-400 my-4 leading-loose sm:leading-loose">Jakarta
+                            Tracking, aplikasi
+                            untuk membantu
+                            penanganan kesehatan dalam mengetahui pendataan kunjungan</p>
+                        <div class="grid grid-cols-1 xl:grid-cols-2 sm:my-4 mb-4">
+                            <a href="projek-jatra.html" target="_blank"
+                                class="btn-gradient-3 border-2 my-4 py-2.5 px-4 text-white text-center text-md sm:text-lg font-light rounded-lg shadow-sm mx-auto block w-52 sm:block sm:w-60 ">
+                                <div class="flex justify-center">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5">
+                                        search
+                                    </i>
+                                    <span class="font-medium">Lihat Studi Kasus</span>
+                                </div>
+                            </a>
+                            <a href="assets/file/Fikry Ardi Fatma - Studi Kasus UIUX  JATRA.pdf" target="_blank"
+                                class="my-4 py-2.5 px-4 text-center text-md sm:text-lg font-light rounded-lg block w-52 mx-auto sm:block sm:w-60 ">
+                                <div class="flex justify-center text-gray-500 hover:text-gray-700">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5  ">
+                                        file_download
+                                    </i>
+                                    <span class="font-medium">Download PDF</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Project -->
+
+    <!-- Section Contact -->
+    <section id="contact" class="relative bg-gradient-1 py-8">
+        <div class="max-w-7xl mx-auto px-8 py-8 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-2">
+            <h1 class="text-white font-bold text-3xl leading-normal lg:text-5xl lg:leading-normal">
+                Tertarik bekerja sama dengan saya?</h1>
+            <div class="sm:flex sm:flex-col sm:items-end sm:justify-center">
+                <button
+                    class="btnModalContact btn-pink my-4 py-4 px-8 text-white text-center text-lg font-semibold rounded-2xl shadow-md w-full sm:block sm:w-60">
+                    <div class="flex justify-center">
+                        <i class="material-icons-outlined mr-2 pt-0.5">
+                            email
+                        </i>
+                        <span> Kontak Saya</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Contact -->
+
+    <!-- Section Wcm -->
+    <section class="bg-color-4 relative py-4 " id="wcm">
+        <div class="max-w-7xl mx-auto my-8 px-8 md:my-20">
+            <div class="grid grid-cols-4 mb-10 sm:inline-block">
+                <img class="inline-block mr-2 w-12 sm:w-20 sm:mr-8 col-span-1 my-auto"
+                    src="assets/img/icon/wcm-icon.png" alt="">
+                <h1
+                    class="align-middle font-extrabold text-2xl text-color-2 leading-normal lg:text-5xl lg:leading-normal inline-block col-span-3 ">
+                    Mengapa Memilih Saya?</h1>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                <div class="grid grid-row-3 px-10 py-16 bg-white shadow-sm text-center rounded-3xl hover:shadow-2xl">
+                    <img class="mx-auto align-middle mt-4 mb-8" src="assets/img/wcm-1.png" alt="">
+                    <h3 class="mb-4 text-xl font-semibold text-gray-500">Profesional</h3>
+                    <p class="text-md text-gray-400">Dapat bekerja secara profesional seseuai aturan serta kerja sama
+                        dengan berbagai tim kerja</p>
+                </div>
+                <div class="grid grid-row-3 px-10 py-16 bg-white shadow-sm text-center rounded-3xl hover:shadow-2xl">
+                    <img class="mx-auto align-middle mt-4 mb-8" src="assets/img/wcm-2.png" alt="">
+                    <h3 class="mb-4 text-xl font-semibold text-gray-500">Kolaboratif</h3>
+                    <p class="text-md text-gray-400">Dapat mengelola projek bersama tim dan juga memberikan pendapat
+                        terhadap projek</p>
+                </div>
+                <div class=" grid grid-row-3 px-10 py-16 bg-white shadow-sm text-center rounded-3xl hover:shadow-2xl">
+                    <img class="mx-auto align-middle mt-4 mb-8" src="assets/img/wcm-3.png" alt="">
+                    <h3 class="mb-4 text-xl font-semibold text-gray-500">Kreatif & Inovatif</h3>
+                    <p class="text-md text-gray-400">Dapat menuangkan ide yang kreatif dan inovatif dalam mendesain UI
+                        agar menarik dan dipahami user</p>
+                </div>
+            </div>
+            <div class="mt-16 sm:mt-0">
+                <a href="about.html"
+                    class="btn-outline-pink block border-2 mb-4 mt-16 sm:mt-12 py-4 px-8 mx-auto text-center text-lg font-semibold rounded-2xl shadow-md sm:block sm:w-60">
+                    <div class="flex justify-center">
+                        <i class="material-icons-outlined mr-2 pt-0.5">
+                            person_outline
+                        </i>
+                        <span>Tentang Saya</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Wcm -->
+
+
+    <!-- Section Testimonials -->
+    <section class="bg-white relative py-16" id=" testimonials">
+        <!-- Image Pattern -->
+        <img class="absolute -top-4 w-screen" src="assets/img/pattern/work-pattern.png" class="" alt="">
+        <div class="mb-10">
+            <h1
+                class="align-middle font-extrabold text-2xl text-color-2 text-center leading-normal lg:text-5xl lg:leading-normal">
+                Testimoni</h1>
+        </div>
+
+        <div class="relative overflow-x-scroll px-8 overflow-y-hidden slider-container h-80" data-item="slider-full">
+            <div class="slider-all-items cursor-pointer">
+                <!-- #1 mba widia -->
+                <div
+                    class="relative block bg-white rounded-2xl shadow-lg px-8 py-8 w-screen w-testimonials mr-8 sm:mx-4 sm:mr-0 whitespace-normal slider-item">
+                    <div class="mb-8">
+                        <img class="inline-block my-auto mr-4" src="assets/img/testimonials/mba-widia.png" alt="">
+                        <div class="inline-block align-middle">
+                            <h5 class="text-color-blue font-semibold">Rahma Widiandrawilli</h5>
+                            <p class="text-gray-400">Talent Operation and Development at Telkom Indonesia </p>
+                        </div>
+                    </div>
+                    <p class="leading-loose">Fikri is a young person who has a passion for learning new things. He took
+                        the internship opportunity at Telkom Digital Business as UI Designer seriously. He completed his
+                        tasks on time and was able to work well in a team. I hope Fikri can continue his career as a
+                        reliable UI/UX designer.</p>
+                </div>
+                <!-- #2 salsa -->
+                <div
+                    class="relative block bg-white rounded-2xl shadow-lg px-8 py-8 w-screen w-testimonials mr-8 sm:mx-4 sm:mr-0 whitespace-normal slider-item">
+                    <div class="mb-8">
+                        <img class="inline-block my-auto mr-4" src="assets/img/testimonials/salsa.png" alt="">
+                        <div class="inline-block align-middle">
+                            <h5 class="text-color-blue font-semibold">Rahmadilla Salsabila</h5>
+                            <p class="text-gray-400">Product Manager at Kemendikbud</p>
+                        </div>
+                    </div>
+                    <p class="leading-loose">While collaborating on the Dikti Sigap Melayani project, Fikri is a
+                        competent UI/UX Designer in his field, he has the initiative in conducting application research,
+                        he is able to make system designs and application designs according to the requirements given
+                        and always completes each task on time.</p>
+                </div>
+                <!-- #3 mas ikhsan -->
+                <div
+                    class="relative block bg-white rounded-2xl shadow-lg px-8 py-8 w-screen w-testimonials mr-8 sm:mx-4 sm:mr-0 whitespace-normal slider-item">
+                    <div class="mb-8">
+                        <img class="inline-block my-auto mr-4" src="assets/img/testimonials/mas-ikhsan.png" alt="">
+                        <div class="inline-block align-middle">
+                            <h5 class="text-color-blue font-semibold">Nurul Ikhsan</h5>
+                            <p class="text-gray-400">Mentor UI/UX Research & Design at Binar Academy</p>
+                        </div>
+                    </div>
+                    <p class="leading-loose">Fikry has good leadership, that shown by his past can coordinate their team
+                        in UI/UX Bootcamp and have the initiative in the team to deliver assignments on time and with
+                        the right quality.</p>
+                </div>
+                <!-- #4 soleh -->
+                <div
+                    class="relative block bg-white rounded-2xl shadow-lg px-8 py-8 w-screen w-testimonials mr-8 sm:mx-4 sm:mr-0 whitespace-normal slider-item">
+                    <div class="mb-8">
+                        <img class="inline-block my-auto mr-4" src="assets/img/testimonials/sholeh.png" alt="">
+                        <div class="inline-block align-middle">
+                            <h5 class="text-color-blue font-semibold">Achmad Solehuddin</h5>
+                            <p class="text-gray-400">Web Developer</p>
+                        </div>
+                    </div>
+                    <p class="leading-loose">Fikry is a professional, hard worker and high skilled UI/UX designer.
+                        A very cooperative and respected person i have ever worked with.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Testimonials -->
+
+    <!-- Footer -->
+    <section id="footer1" class="relative brand-color-4 py-8">
+        <div class="max-w-7xl mx-auto px-8 py-8 text-center">
+            <h1 class="text-white font-semibold text-3xl leading-normal lg:text-5xl lg:leading-normal my-4">
+                Lets Connect</h1>
+            <p class="text-gray-300 text-xl">Untuk keperluan bisnis dan kolaborasi, silahkan email
+                <span class="text-white font-semibold"><a href="mailto:fikryard@gmail.com">fikryard@gmail.com</a></span>
+            </p>
+            <div class="flex justify-center mt-8 text-white">
+                <a href="https://www.instagram.com/fikryard.ui/" class="mx-8 hover:text-blue-300"><i
+                        class="fab fa-2x fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/fikry-ardi-193b5617b/" class="mx-8 hover:text-blue-300"><i
+                        class="fab fa-2x fa-linkedin-in"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=628179112639" class="mx-8 hover:text-blue-300"><i
+                        class="fab fa-2x fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer2" class="relative py-4 bg-white">
+        <div class="max-w-7xl mx-auto px-8 py-8 text-center">
+            <p class="text-gray-600 text-xl">2021 Code Program by <a href="https://achso13.github.io/"
+                    class="hover:text-blue-800 font-medium">Achmad Solehuddin</a>
+            </p>
+        </div>
+    </section>
+    <!-- End Footer -->
+
+    <!-- Modal -->
+    <div class="overlayContact bg-black top-0 left-0 right-0 opacity-40 fixed w-screen h-screen z-40 hidden">
+
+    </div>
+    <div
+        class="modalContact mx-auto fixed top-0 left-0 right-0 mt-12 px-8 py-8 rounded-xl w-full lg:w-1/3 shadow-2xl bg-white z-50 hidden">
+        <img src="assets/img/pattern/work-pattern.png" class="absolute top-0 left-0" alt="">
+        <div class="relative flex justify-between items-center mb-8">
+            <div>
+                <h3 class="text-color-blue text-2xl font-bold">Kontak Saya</h3>
+                <p class="text-sm text-gray-400">Hubungi saya melalui email</p>
+            </div>
+            <button type="button"
+                class="btnCloseModalContact rounded-full border-1 border-pink-500 text-pink-500 w-8 h-8 hover:bg-pink-500 hover:text-white">
+                &times;
+            </button>
+        </div>
+
+        <form name="contact-form-portfolio">
+            <div class="my-3">
+                <label for="email" class="text-sm block mb-3">Email</label>
+                <input type="email"
+                    class="text-sm rounded-md bg-gray-200 block w-full h-8 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    id="email" name="email">
+            </div>
+            <div class="my-3">
+                <label for="name" class="text-sm block mb-3">Nama</label>
+                <input type="text"
+                    class="text-sm rounded-md bg-gray-200 block w-full h-8 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    id="name" name="name">
+            </div>
+            <div class="my-3">
+                <label for="message" class="text-sm block mb-3">Pesan</label>
+                <textarea
+                    class="text-sm rounded-md bg-gray-200 block w-full focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    id="message" rows="10" name="message"></textarea>
+            </div>
+            <button type="submit"
+                class="btn-submit btn-gradient-1 block mt-4 py-2 px-8 text-white text-center text-sm rounded-lg shadow-md w-full sm:w-40 ml-auto mr-0">
+                <div class="flex justify-center">
+                    <i class="material-icons-outlined text-sm mr-2">
+                        send
+                    </i>
+                    <span> Kirim</span>
+                </div>
+            </button>
+            <button type="submit"
+                class="btn-loading btn-gradient-1 mt-4 py-2 px-8 text-white text-center text-sm rounded-lg shadow-md w-full sm:w-40 ml-auto mr-0 hidden"
+                disabled>
+                <div class="flex justify-center">
+                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+                        <path class="opacity-75" fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                        </path>
+                    </svg>
+                    <span> Loading</span>
+                </div>
+            </button>
+        </form>
+    </div>
+    <!-- End Modal -->
+</body>
+
+<!-- Script form -->
+<script>
+    const scriptURL =
+        'https://script.google.com/macros/s/AKfycbwSKIh0t8AvLlFp9VEda3wvFQR0Ybji_kY1UMbcTRhUw7sj8NDEKDS1zitLZPyP-YmK/exec'
+    const form = document.forms['contact-form-portfolio'];
+
+    const btnSubmit = document.querySelector('.btn-submit');
+    const btnLoading = document.querySelector('.btn-loading');
+
+    form.addEventListener('submit', e => {
+        btnLoading.classList.toggle('hidden');
+        btnLoading.classList.toggle('block');
+        btnSubmit.classList.toggle('hidden');
+        e.preventDefault()
+        fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => {
+                btnLoading.classList.toggle('hidden');
+                btnLoading.classList.toggle('block');
+                btnSubmit.classList.toggle('hidden');
+                $(".overlayContact").toggleClass("hidden");
+                $(".modalContact").fadeOut(300).toggleClass("hidden");
+
+                console.log('Success!', response);
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+    });
+</script>
+
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+<!-- Custom Javascript -->
+<script src="assets/js/script.js"></script>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/dfe13ba546.js" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/nav-icon.png" />
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Projek - Jakarta Tracking</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="sticky top-0 bg-color-4 z-30 transition-all" id="nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center py-6 md:justify-between md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="index.html">
+                        <img class="h-10 w-auto sm:h-12" src="assets/img/nav-icon.png" alt="">
+                    </a>
+                </div>
+                <div class="-mr-2 -my-2 md:hidden" id="burger-menu">
+                    <button type="button"
+                        class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-600 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                        aria-expanded="false">
+                        <span class="sr-only">Open menu</span>
+                        <!-- Heroicon name: outline/menu -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+                <nav class="hidden md:flex md:space-x-16 ">
+                    <a href="index.html" class="text-lg font-medium text-color-blue hover:text-blue-500">
+                        Home
+                    </a>
+                    <a href="index.html#project" class="text-lg font-bold text-color-blue hover:text-blue-500">
+                        Projek
+                    </a>
+                    <a href="about.html" class="text-lg font-medium text-color-blue hover:text-blue-500">
+                        About
+                    </a>
+                    <p class="btnModalContact text-lg font-medium text-color-blue hover:text-blue-500 cursor-pointer">
+                        Contact me
+                    </p>
+                </nav>
+            </div>
+        </div>
+
+        <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden md:hidden"
+            id="navbar-hidden-menu">
+            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+                <div class="pt-5 pb-6 px-5">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <img class="h-10 w-auto" src="assets/img/nav-icon.png" alt="Workflow">
+                        </div>
+                        <div class="-mr-2" id="close-button">
+                            <button type="button"
+                                class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-600 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                <span class="sr-only">Close menu</span>
+                                <!-- Heroicon name: outline/x -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <nav class="grid gap-y-8">
+                            <a href="index.html" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                <span class="ml-3 text-base font-medium text-color-blue hover:text-blue-500">
+                                    Home
+                                </span>
+                            </a>
+
+                            <a href="index.html#project" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                <span class="ml-3 text-base font-medium text-color-blue hover:text-blue-500">
+                                    Project
+                                </span>
+                            </a>
+
+                            <a href="about.html" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                <span class="ml-3 text-base font-medium text-color-blue hover:text-blue-500">
+                                    About
+                                </span>
+                            </a>
+
+                            <p
+                                class="btnModalContact -m-3 p-3 flex items-center rounded-md hover:bg-gray-50 cursor-pointer">
+                                <span class="ml-3 text-base font-medium text-color-blue hover:text-blue-500">
+                                    Contact Me
+                                </span>
+                            </p>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Section CTA -->
+    <section class="relative pt-16 pb-4" id="cta">
+        <img class="absolute top-0 w-screen" src="assets/img/pattern/work-pattern.png" class="" alt="">
+        <div
+            class="relative max-w-7xl mx-auto align-middle px-8 py-8 bg-white rounded-3xl grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-2 ">
+            <div>
+                <h3 class="text-color-blue font-semi bold text-lg">Studi Kasus</h3>
+                <h1
+                    class="text-color-blue font-bold text-3xl text-color-2 leading-normal lg:text-5xl lg:leading-normal">
+                    Jakarta Tracking</h1>
+            </div>
+
+            <div class=" sm:flex sm:flex-col sm:items-end sm:justify-center">
+                <a href="assets/file/Fikry Ardi Fatma - Studi Kasus UIUX  JATRA.pdf"
+                    class="btn-gradient-1 block my-4 py-4 px-8 text-white text-center text-lg font-semibold rounded-2xl shadow-md  sm:block sm:w-60">
+                    <div class="flex justify-center">
+                        <i class="material-icons-outlined mr-2 pt-0.5">
+                            file_download
+                        </i>
+                        <span>Download PDF</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End Section CTA -->
+
+    <!-- Section Parallax  -->
+    <section
+        class="relative h-screen w-screen my-20 border-t-2 border-b-2 border-gray-50 bg-no-repeat bg-center bg-cover  bg-fixed"
+        style="background-image: url(assets/img/project-jatra/jatra1\ 1.png)">
+    </section>
+    <!-- End Section Parallax -->
+
+    <!-- Section Content -->
+    <section class="relative py-8 md:mt-20">
+        <div class="max-w-7xl mx-auto px-8">
+            <!-- Text -->
+            <div class="mb-16 ">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Jakarta tracking atau jatra ialah aplikasi yang hadir untuk memberikan solusi pendataan terkait
+                    pandemic
+                    COVID-19 yang kita hadapi Bersama sama, terutama untuk kasus positif di DKI Jakarta. Berdasarkan
+                    data statistic
+                    sectoral DKI Jakarta pandemic ini berdampak pada turun nya jumlah wisatawan dalam negri maupun
+                    mancanegara yang mulai
+                    terjadi pada awal Januari 2020 dan terus menerus turun tajam hingga bulan April 2020 sebesar 99.8%
+                    dari April 2019.
+                    Wabah ini menyebabkan berubahnya prosedur aturan atau prosedur datang sampai pulangnya wisatawan
+                    yang ingin berwisata
+                    ke DKI Jakarta. Dan seperti yang di arahkan oleh Gubernur DKI Jakarta dalam Pergub Nomor 101 Ayat 1
+                    Huruf Q diwajibkannya
+                    melakukan pendataan pengunjung agar mempermudah penyelidikan epidemonologi apabila ditemukan kasus
+                    positif COVID-19.</p>
+            </div>
+            <!-- End Text -->
+            <!-- Text + List -->
+            <div class="mb-16 ">
+                <h3 class="text-color-blue text-2xl md:text-4xl font-semibold my-8">Tujuan</h3>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">Dalam pengembangan perangkat lunak UI
+                    aplikasi Jakarta Tracking, memiliki tujuan dan manfaat yaitu;
+                </p>
+                <ul class="text-gray-600 text-md md:text-xl leading-relaxed list-disc list-outside pl-6">
+                    <li class="list-item">Untuk membantu penanganan kesehatan kepada pemerintah dalam mengetahui
+                        pendataan kunjungan pada sektor
+                        pariwisata maupun tempat usaha terbuka(seperti Mall,Coffe shop,Restoran,dsb) </li>
+                    <li class="list-item">Dapat me-tracking NIK para pengunjung, sehingga dapat meminimalisir penyebaran
+                        Covid-19, kemudian
+                        juga dapat membantu pencegahan penyebaran dengan melakukan pembatasan atau penutupan sementara
+                        tempat
+                        usaha/pariwisata yang memiliki banyak data tracking penyebaran virus Covid-19.
+                    </li>
+                    <li class="list-item">Membantu melakukan pendisiplinan pada masyarakat agar dapat selalu mematuhi
+                        protocol kesehatan dimana saja,
+                        terutama pada tempat umum rawan keramaian serta juga dapat membantu masyarakat untuk melakukan
+                        pembatasan pada
+                        diri sendiri.</li>
+                </ul>
+            </div>
+            <!-- End Text + List -->
+
+            <!-- Text + Gambar + Caption-->
+            <div class="mb-16">
+                <h3 class="text-color-blue text-4xl font-semibold my-8">Pengguna</h3>
+                <p class="text-gray-600 text-xl leading-relaxed">pada saat membuat aplikasi ini hanya ada 1 sisi
+                    pengguna yaitu pemilik tempat usaha atau wisata dimana aplikasi
+                    ini berguna untuk pendataan jumlah pengunjung suatu tempat usaha tersebut. Dan aplikasi ini juga
+                    dapat membantu
+                    sang pelaku usaha dalam menjalankan usahanya yang sehat dan tetap menjalankan protocol Kesehatan
+                    yang berlaku
+                </p>
+                <img class="w-97 h-auto my-8" src="assets/img/project-jatra/user persona 1.png" alt="">
+            </div>
+            <!-- End Text + Gambar + Caption-->
+
+            <!-- Text + List -->
+            <div class="mb-16 ">
+                <h3 class="text-color-blue text-2xl md:text-4xl font-semibold my-8">Peran dan Tugas</h3>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">proses pembuatan aplikasi ini di kerjakan
+                    oleh tim. Dan saya disini sebagai UI designer utama yang memiliki tugas
+                </p>
+                <ul class="text-gray-600 text-md md:text-xl leading-relaxed list-disc list-outside pl-6">
+                    <li class="list-item">Membantu dalam merumuskan user flow </li>
+                    <li class="list-item">Membuat wireframe
+                    </li>
+                    <li class="list-item">dan terakhir membuat mockup aplikasi.</li>
+                </ul>
+            </div>
+            <!-- End Text + List -->
+
+            <!-- Text + List -->
+            <div class="mb-16 ">
+                <h3 class="text-color-blue text-2xl md:text-4xl font-semibold my-8">Ruang Lingkup dan Batasan</h3>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">seperti yang saya jelaskan sebelumnya,
+                    aplikasi ini baru hanya memiliki 1 sisi pengguna yaitu sang pelaku
+                    usaha atau wisata yang memiliki cakupan sebagai berikut.
+                </p>
+                <ul class="text-gray-600 text-md md:text-xl leading-relaxed list-disc list-outside pl-6">
+                    <li class="list-item">dapat mengetahui status Kesehatan tempat usaha/wisata</li>
+                    <li class="list-item">mendata pelanggan dengan men-scan NFC E-KTP </li>
+                    <li class="list-item">mengetahui jumlah data pengunjung dan rata-rata suhu badan nya</li>
+                    <li class="list-item">mengetahui jumlah maksimal pengunjung </li>
+                    <li class="list-item">>mendapatkan informasi perkembangan terbaru tentang COVID-19</li>
+                </ul>
+            </div>
+            <!-- End Text + List -->
+
+            <!-- Text -->
+            <div class="mb-16 ">
+                <h3 class="text-color-blue text-2xl md:text-4xl font-semibold my-8">Kendala</h3>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Karena keterbatasan waktu dan jumlah tim yang hanya 3 orang, jadi kami tidak memiliki hasil
+                    penelitian lebih lanjut
+                    seperti wawancara atau menyebarkan quisioner. Maka solusi dari itu kita hanya melakukan riset melalu
+                    media internet
+                    dan jurnal-jurnal yang ada, dan kami rasa aplikasi ini cukup efektif dan memberi kemudahan pada
+                    setiap pelaku usaha
+                    maupun pelanggan itu sendiri. karena aplikasi ini berdasarkan Pergub DKI yang ada dan menyesuaikan
+                    keadaan yang
+                    terjadi </p>
+            </div>
+            <!-- End Text -->
+
+            <!-- Text -->
+            <div class="mb-16 ">
+                <h3 class="text-color-blue text-2xl md:text-4xl font-semibold my-8">Proses</h3>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Pada proses desain ini yang pertama saya lakukan ialah membuat user flow lalu wireframe dan terakhir
+                    design mockup aplikasi. </p>
+            </div>
+            <!-- End Text -->
+
+            <!-- Text + Gambar + Caption-->
+            <div class="mb-16 ">
+                <h3 class="text-color-blue text-2xl md:text-4xl font-semibold my-8">User Flow</h3>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    User dari ide-ide diatas dilanjutkan dengan membuat user flow dari user membuka aplikasi hingga user
+                    men scan NFC pada
+                    saat pelanggan keluar </p>
+                <img width="800px" class="m-auto h-auto my-8" src="assets/img/project-jatra/userflow.png" alt="">
+            </div>
+            <!-- End Text + Gambar + Caption-->
+
+            <!-- Text + Gambar + Caption-->
+            <div class="mb-16 ">
+                <h3 class="text-color-blue text-2xl md:text-4xl font-semibold my-8">Wireframe</h3>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Setelah membuat userflow dilanjutkan dengan membuat wireframe. hal yang dikemas pada wireframe ialah
+                    menginformasikan
+                    segala proses interaksi antara user dengan aplikasi. Saya membuat wireframe ini menggunakan figma
+                    dan pada proses ini saya
+                    menjelaskan alur proses user yang lebih tergambarkan dengan visual.</p>
+            </div>
+            <!-- End Text + Gambar + Caption-->
+
+            <!-- Text  + Gambar-->
+            <div class="mb-16 ">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    <strong>1. Wireframe Onboarding, Masuk, Register</strong></p>
+                <img width="800px" class="m-auto h-auto my-8" src="assets/img/project-jatra/wireframe1.png" alt="">
+            </div>
+            <!-- End Text + Gambar-->
+
+            <!-- Text  + Gambar-->
+            <div class="mb-16 ">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    <strong>2. Wireframe Fitur-fitur Aplikasi</strong></p>
+                <br>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Dibawah ini ialah wireframe dalam menggambarkan alur proses user setelah melakukan masuk dan
+                    register yang terdiri dari
+                    menu utama, scan masuk dan keluar, profile, notifikasi, detail masuk dan keluar pelanggan.</p>
+                <img width="800px" class="m-auto h-auto my-8" src="assets/img/project-jatra/wireframe2.png" alt="">
+            </div>
+            <!-- End Text + Gambar-->
+
+            <!-- Text + Gambar + Caption-->
+            <div class="mb-16 ">
+                <h3 class="text-color-blue text-2xl md:text-4xl font-semibold my-8">Inspirasi</h3>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Pada mendesain aplikasi ini saya mencari inspirasi desain di dribbble dan tentunya aplikasi corona
+                    DKI Jakarta dimana
+                    proses style aplikasi dan pewarnaan banyak saya ambil dari website tersebut dimana hasil eksplorasi
+                    saya ini mendominasi warna
+                    biru dan putih agar terkesan simple. Saya akan share beberapa hasil dalam eksplorasi
+                    saya dibawah ini.</p>
+                <img width="800px" class="m-auto h-auto my-8" src="assets/img/project-jatra/inspiration.png" alt="">
+            </div>
+            <!-- End Text + Gambar + Caption-->
+
+            <!-- Text + Gambar + Caption-->
+            <div class="mb-16 ">
+                <h3 class="text-color-blue text-2xl md:text-4xl font-semibold my-8">Style dan Tipografi</h3>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Berdasarkan inspirasi diatas saya akhirnya memutuskan guideline dari style dan tipografi pada desain
+                    aplikasi ini sebagai berikut.</p>
+                <img width="800px" class="m-auto h-auto my-8" src="assets/img/project-jatra/guide style.png" alt="">
+            </div>
+            <!-- End Text + Gambar + Caption-->
+
+            <!-- Text -->
+            <div class="mb-16 ">
+                <h3 class="text-color-blue text-2xl md:text-4xl font-semibold my-8">Mockups Design</h3>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Setelah menentukan guideline style, maka saya melanjutkan membuat high fidelity dari aplikasi Jatra
+                    tersebut.. </p>
+            </div>
+            <!-- End Text -->
+
+            <!-- Text  + Gambar-->
+            <div class="mb-16 ">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    <strong>1. Onboarding</strong></p>
+                <img width="800px" class="m-auto h-auto my-8" src="assets/img/project-jatra/onboarding.png" alt="">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Pada halaman onboarding ini user diberikan informasi awal dari fungsi aplikasi ini, user dapat
+                    men-swipe informasi
+                    dan saya menambahkan ilustrasi agar user dapat mencerna lebih cepat informasi yang diberikan. </p>
+            </div>
+            <!-- End Text + Gambar-->
+
+            <!-- Text  + Gambar-->
+            <div class="mb-16 ">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    <strong>2. Masuk dan Registrasi</strong></p>
+                <img width="800px" class="m-auto h-auto my-8" src="assets/img/project-jatra/register.png" alt="">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    User melakukan registrasi dan saya membagi beberapa langkah register agar user tidak terlalu bosan
+                    dan menganggap lama
+                    karna harus men-scroll terus menerus dalam mengisi form. Serta desain yang cukup simple dan banyak
+                    diketahui orang-orang dan
+                    lagi-lagi agar memudahkan user</p>
+
+            </div>
+            <!-- End Text + Gambar-->
+
+            <!-- Text  + Gambar-->
+            <div class="mb-16 ">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    <strong>3. Menu Utama</strong></p>
+                <img width="800px" class="m-auto h-auto my-8" src="assets/img/project-jatra/homepage.png" alt="">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Seperti penjelasan pada gambar diatas, inti dari menu utama ini ialah agar pihak restoran atau
+                    wisata dapat mengetahui perkembangan kesehatan pada tempat
+                    nya sendiri. Dan saya memuat semua data pada satu halaman yang sama dikarenakan agar user dapat
+                    membaca dengan cepat dan praktis tanpa harus berpindah-pindah
+                    halaman aplikasi.</p>
+
+            </div>
+            <!-- End Text + Gambar-->
+
+            <!-- Text  + Gambar-->
+            <div class="mb-16 ">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    <strong>4. Navigation Bar</strong></p>
+                <img width="800px" class="m-auto h-auto my-8" src="assets/img/project-jatra/navbar.png" alt="">
+            </div>
+            <!-- End Text + Gambar-->
+
+            <!-- Text  + Gambar-->
+            <div class="mb-16 ">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    <strong>5. Scan NFC E-KTP & Pendataan Masuk Maupun Keluar</strong></p>
+                <img class="w-full h-auto my-8" src="assets/img/project-jatra/scan.png" alt="">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Pada proses ini bisa dilakukan oleh user yang menjaga pintu masuk sektor usaha atau wisata. Karena
+                    itu saya membuat desain ini
+                    cukup simple dikarenakan agar mengurangi antrian yang panjang pada proses pendataan tersebut. Maka
+                    saya membuat fitur SCAN NFC E-KTP
+                    tersebut dengan cara men-swipe kiri dan kanan untuk men-scan pengunjung masuk dan keluar. Setelah
+                    itu NIK dan nama pengunjung akan langsung
+                    tercantum di pendataan pengunjung maka user hanya mengisi suhu dan mencentang standar pengunjung
+                    seperti masker dan penggunaan Hand sanitizer.
+                    <br>
+                    <br>
+                    Begitupun dengan pengunjung keluar maka E-KTP akan kembali di scan, lalu user akan meng-klik tombol
+                    tanda pengunjung keluar dan otomatis sistem
+                    akan mengurangi jumlah pengunjung pada suatu termpat tersebut.</p>
+            </div>
+            <!-- End Text + Gambar-->
+
+            <!-- Text  + Gambar-->
+            <div class="mb-16 ">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    <strong>6. Pengunjung ditolak</strong></p>
+                <img width="500px" class="m-auto h-auto my-8" src="assets/img/project-jatra/ditolak.png" alt="">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Pasti banyak yang heran mengapa ada total 'jumlah penggunaan NIK' pada menu pendataan. Sebelumnya
+                    kami mendasari bahwa virus COVID-19
+                    menular melalui interaksi orang ke orang lain yang terus berpindah-pindah lokasi. Karena diri kita
+                    sendiri mungkin tanpa kita sadari
+                    bisa menjadi carrier bagi orang lain. Oleh karena itu kesimpulan sementara dari kami ialah membatai
+                    pergerakan orang lain dengan menghitung
+                    dari jumlah NIK yang telah di scan dari berbagai tempat. Dan memang masih belum tersimpulkan berapa
+                    jumlah batasan penggunaan NIK ini karena
+                    hal tersebut memperlukan beberapa faktor pendukung atas penentuan jumlah batasan tersebut.
+                    <br><br>
+                    Namun, pada aplikasi ini saya tetap membuat desain interface nya jikalau memang ada pengunjung yang
+                    ditolak masuk dikarenakan telah melebihi
+                    batas maksimal penggunaan Scan E-KTP.</p>
+            </div>
+            <!-- End Text + Gambar-->
+
+            <div class="mb-16 ">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    <strong>7. Menu Profil Usaha</strong></p>
+                <img width="500px" class="m-auto h-auto my-8" src="assets/img/project-jatra/profile.png" alt="">
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed">
+                    Profile usaha tersebut berisikan data-data usaha yang telah diisi dan dapat diedit kembali pada menu
+                    ini.</p>
+            </div>
+            <!-- End Text + Gambar-->
+
+            <!-- Text -->
+            <div class="mb-16 ">
+                <h3 class="text-color-blue text-2xl md:text-4xl font-semibold my-8">Kesimpulan</h3>
+                <p class="text-gray-600 text-md md:text-xl leading-relaxed"> Pada kesimpulan kali ini, saya berharap
+                    aplikasi JATRA dapat menjadi solusi dalam menanggulangi pandemi COVID-19.
+                    Dalam proses pendataan dan mengecek pergerakan masyarakat demi terhindar dari kerumunan pada satu
+                    tempat dan menyebabkan penularan virus
+                    yang dapat membahayakan diri sendiri maupun orang lain.</p>
+            </div>
+            <!-- End Text -->
+        </div>
+    </section>
+    <!-- End Section Content -->
+
+    <!-- Section Projek Lainnya -->
+    <section id="other" class="relative py-8 md:mt-20">
+        <div class="max-w-7xl mx-auto px-8 py-8">
+            <h1
+                class="text-color-blue font-bold text-3xl text-color-2 leading-normal lg:text-5xl lg:leading-normal mb-12">
+                Projek Lainnya</h1>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-12">
+                <div class="col-span-2 bg-white shadow-xl rounded-3xl">
+                    <img class="w-full h-auto" src="assets/img/project-jatra/card-1.png" alt="">
+                    <div class="px-6 mt-8">
+                        <h3 class="text-4xl font-medium">JDIH</h3>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 sm:my-4 mb-4">
+                            <a href="projek-jdih.html"
+                                class="btn-gradient-1 border-2 my-4 py-2.5 text-white text-center text-md sm:text-lg font-light rounded-lg shadow-sm mx-auto block w-52 sm:block sm:w-56 ">
+                                <div class="flex justify-center">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5">
+                                        search
+                                    </i>
+                                    <span class="font-medium">Lihat Studi Kasus</span>
+                                </div>
+                            </a>
+                            <a href="https://jdih.dpd.go.id/"
+                                class="my-4 py-2.5 text-center text-md sm:text-lg font-light rounded-lg block w-52 mx-auto sm:block sm:w-56 ">
+                                <div class="flex justify-center text-gray-500 hover:text-gray-700">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5  ">
+                                        link
+                                    </i>
+                                    <span class="font-medium">Lihat Website</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-2 bg-white shadow-xl rounded-3xl">
+                    <img class="w-full h-auto" src="assets/img/project-jatra/card-2.png" alt="">
+                    <div class="px-6 mt-8">
+                        <h3 class="text-4xl font-medium">StudentHunt</h3>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 sm:my-4 mb-4">
+                            <a href="projek.html"
+                                class="btn-gradient-3 border-2 my-4 py-2.5 text-white text-center text-md sm:text-lg font-light rounded-lg shadow-sm mx-auto block w-52 sm:block sm:w-56 ">
+                                <div class="flex justify-center">
+                                    <i class="material-icons-outlined mr-4 sm:pt-0.5">
+                                        search
+                                    </i>
+                                    <span class="font-medium">Lihat Studi Kasus</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Project Lainnya -->
+    <!-- Section Contact -->
+    <section id="contact" class="relative bg-white py-8 md:mt-20">
+        <img class="absolute -top-24" src="assets/img/pattern/circle-pattern.png" class="" alt="">
+        <div class="max-w-7xl mx-auto px-8 py-8 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-2">
+            <h1 class="text-color-blue font-bold text-3xl text-color-2 leading-normal lg:text-5xl lg:leading-normal">
+                Tertarik bekerja sama dengan saya?</h1>
+            <div class="sm:flex sm:flex-col sm:items-end sm:justify-center">
+                <button
+                    class="btnModalContact btn-pink my-4 py-4 px-8 text-white text-center text-lg font-semibold rounded-2xl shadow-md w-full sm:block sm:w-60">
+                    <div class="flex justify-center">
+                        <i class="material-icons-outlined mr-2 pt-0.5">
+                            email
+                        </i>
+                        <span> Kontak Saya</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Contact -->
+
+    <!-- Footer -->
+    <section id="footer1" class="relative brand-color-4 py-8">
+        <div class="max-w-7xl mx-auto px-8 py-8 text-center">
+            <h1 class="text-white font-semibold text-3xl leading-normal lg:text-5xl lg:leading-normal my-4">
+                Lets Connect</h1>
+            <p class="text-gray-300 text-xl">Untuk keperluan bisnis dan kolaborasi, silahkan email
+                <span class="text-white font-semibold"><a href="mailto:fikryard@gmail.com">fikryard@gmail.com</a></span>
+            </p>
+            <div class="flex justify-center mt-8 text-white">
+                <a href="https://www.instagram.com/fikryard.ui/" class="mx-8 hover:text-blue-300"><i
+                        class="fab fa-2x fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/fikry-ardi-193b5617b/" class="mx-8 hover:text-blue-300"><i
+                        class="fab fa-2x fa-linkedin-in"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=628179112639" class="mx-8 hover:text-blue-300"><i
+                        class="fab fa-2x fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer2" class="relative py-4 bg-white">
+        <div class="max-w-7xl mx-auto px-8 py-8 text-center">
+            <p class="text-gray-600 text-xl">2021 Code Program by <a href="https://achso13.github.io/"
+                    class="hover:text-blue-800 font-medium">Achmad Solehuddin</a>
+            </p>
+        </div>
+    </section>
+    <!-- End Footer -->
+
+    <!-- Modal -->
+    <div class="overlayContact bg-black top-0 left-0 right-0 opacity-40 fixed w-screen h-screen z-40 hidden">
+
+    </div>
+    <div
+        class="modalContact mx-auto fixed top-0 left-0 right-0 mt-12 px-8 py-8 rounded-xl w-full lg:w-1/3 shadow-2xl bg-white z-50 hidden">
+        <img src="assets/img/pattern/work-pattern.png" class="absolute top-0 left-0" alt="">
+        <div class="relative flex justify-between items-center mb-8">
+            <div>
+                <h3 class="text-color-blue text-2xl font-bold">Kontak Saya</h3>
+                <p class="text-sm text-gray-600">Hubungi saya melalui email</p>
+            </div>
+            <button type="button"
+                class="btnCloseModalContact rounded-full border-1 border-pink-500 text-pink-500 w-8 h-8 hover:bg-pink-500 hover:text-white">
+                &times;
+            </button>
+        </div>
+
+        <form name="contact-form-portfolio">
+            <div class="my-3">
+                <label for="email" class="text-sm block mb-3">Email</label>
+                <input type="email"
+                    class="text-sm rounded-md bg-gray-200 block w-full h-8 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    id="email" name="email">
+            </div>
+            <div class="my-3">
+                <label for="name" class="text-sm block mb-3">Nama</label>
+                <input type="text"
+                    class="text-sm rounded-md bg-gray-200 block w-full h-8 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    id="name" name="name">
+            </div>
+            <div class="my-3">
+                <label for="message" class="text-sm block mb-3">Pesan</label>
+                <textarea
+                    class="text-sm rounded-md bg-gray-200 block w-full focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                    id="message" rows="10" name="message"></textarea>
+            </div>
+            <button type="submit"
+                class="btn-submit btn-gradient-1 block mt-4 py-2 px-8 text-white text-center text-sm rounded-lg shadow-md w-full sm:w-40 ml-auto mr-0">
+                <div class="flex justify-center">
+                    <i class="material-icons-outlined text-sm mr-2">
+                        send
+                    </i>
+                    <span> Kirim</span>
+                </div>
+            </button>
+            <button type="submit"
+                class="btn-loading btn-gradient-1 mt-4 py-2 px-8 text-white text-center text-sm rounded-lg shadow-md w-full sm:w-40 ml-auto mr-0 hidden"
+                disabled>
+                <div class="flex justify-center">
+                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+                        <path class="opacity-75" fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                        </path>
+                    </svg>
+                    <span> Loading</span>
+                </div>
+            </button>
+        </form>
+    </div>
+    <!-- End Modal -->
+</body>
+
+<!-- Script form -->
+<script>
+    const scriptURL =
+        'https://script.google.com/macros/s/AKfycbwSKIh0t8AvLlFp9VEda3wvFQR0Ybji_kY1UMbcTRhUw7sj8NDEKDS1zitLZPyP-YmK/exec'
+    const form = document.forms['contact-form-portfolio'];
+
+    const btnSubmit = document.querySelector('.btn-submit');
+    const btnLoading = document.querySelector('.btn-loading');
+
+    form.addEventListener('submit', e => {
+        btnLoading.classList.toggle('hidden');
+        btnLoading.classList.toggle('block');
+        btnSubmit.classList.toggle('hidden');
+        e.preventDefault()
+        fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => {
+                btnLoading.classList.toggle('hidden');
+                btnLoading.classList.toggle('block');
+                btnSubmit.classList.toggle('hidden');
+                $(".overlayContact").toggleClass("hidden");
+                $(".modalContact").fadeOut(300).toggleClass("hidden");
+
+                console.log('Success!', response);
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+    });
+</script>
+
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/dfe13ba546.js" crossorigin="anonymous"></script>
+
+<!-- Custom Javascript -->
+<script src="assets/js/script.js"></script>
+
+</html>
